@@ -1,0 +1,342 @@
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1300px;
+  border-radius: 10px;
+  margin: auto;
+  text-align: center;
+  background-color: rgb(208, 206, 225);
+}
+.pic{
+  height: 630px;
+  border-radius: 10px;
+  
+}
+
+@media screen and (max-width: 413){
+  .pic{
+    height: 100px;
+    border-radius: 10px;
+  }
+}
+
+.container {
+  padding: 2px 16px;
+
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+/* COLOR PALETTE
+
+Dark green    #3c8453
+Sandy beige   #bcaa96
+Dark gray     #222222
+Light gray    #d3d4d6
+Off-white     #f6f6f6 
+*/
+
+/* ----------------------- Global Syles--------*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+  font-size: 62%;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+  httml, body {
+  height: 100%;
+}
+
+  
+
+body {
+  background:rgb(220, 209, 211);
+  margin: 0;
+  /*  font for the body*/
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.4;
+}
+/* font for the headers*/
+h1, h2, h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  margin: 0;
+  }
+     
+
+h1 {
+  font-size: 7rem;
+  line-height: 1.5;
+}
+h2{
+  font: size 3.6rem; 
+}
+h3{
+  font-size: 2.4rem;
+}
+
+/*links*/
+  a{
+      color: #3c8453 ;
+
+}
+/* here weare using the pseudo class andn the secomnd code removes the underline from the link*/
+a:hover{
+  color: #bcaa96 ;
+  text-decoration: none;
+}
+/* adding style to footer*/
+footer a {
+  color: #bcaa96;
+}
+footer a:hover{
+  color: #3c8453 ;
+  /* content wrapper class was created to move this section of the page to the middle*/
+}
+.content-wrapper{
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+/*------------------------HOME------------*/
+
+.home {
+   background: url(../images/main.jpg) no-repeat ;  
+   /* this makes the pic flexible for all devices */
+   background-size: cover;
+  
+
+}
+
+
+  /* here we use descedant style to apply CSS and the 0.9 indicates the opacity*/
+.home .content-wrapper {
+      background: rgb (255 255 255 / 0.9) ;
+      display: flex;
+      flex-direction: column;
+ 
+  }
+
+  .content-bg{
+      background: rgb (255 255 255 / 0.9);
+      padding: 30px; 
+
+  } 
+  @media screen and (max-width: 650) {
+      .home .content-wrapper{
+          padding: 10px;
+      }
+      .content-bg {
+          padding: 20px;
+      }
+      
+  }
+
+
+/*-----------------------RESUME----------------*/
+.resume header::before {
+  background: url(../images/bg-home-office-studio.jpg) center ;
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 275px;
+  border-radius: 10px;
+}
+.resume-section{
+  margin-bottom: 50px;
+}
+.resume-section h2 {
+  border-bottom: 2px dashed #d3d4d6;
+}
+@media screen and (max-width: 500px) {
+  .resume header::before {
+      height: 200px;
+  }
+  h1{
+      font-size: 5rem;
+
+  }
+
+  h2{
+      font-size: 2.6rem;
+  }
+
+}
+ 
+  
+
+
+/*------------------------About----------------*/
+.about-section {
+  margin-bottom: 50px;
+}
+.about-section h2 {
+  border-bottom: 2px dashed #d3d4d6;
+}
+.about-section p {
+  margin: 0;
+}
+
+.about-section.meta {
+  font-size: 1.4rem;
+  color: #bcaa96;
+}
+
+/*------------------------Contact----------------*/
+.contact-section {
+  margin-bottom: 50px;
+
+}
+  
+
+/*-here we add flow root ends the float and  seperates the pictures horizontally with margin we craete space. and float to makes  pictures go to the left.  line next to the pics ------*/
+
+
+/*------------------------Projects------------*/
+.project-item {
+ 
+  margin: 30px 0;
+}
+.project-item img {
+  width: 300px;
+ 
+
+}
+@media screen and (min-width: 860px) {
+  .project-item {
+      display: flow-root;
+     
+   }
+   .project-item img {
+      
+      float: left;
+      margin-right: 20px;
+  
+  }
+
+}
+
+  @media screen and (max-width: 500px) {
+     .project-item img {
+          width: 100%;
+          margin-bottom: 10px;
+          align-items: center;
+      }
+     .project-item img {
+          margin-bottom: 20px;
+      }
+  }
+
+.project-item h3 {
+  margin: 0;
+}
+.project-item p {
+  margin: 0;
+}
+
+/*------------------------Work Experience------------*/
+.work-item{
+
+  margin: 30px 0;
+}
+.work-details p {
+  margin: 0;
+}
+
+@media screen and (min-width:860px){
+  .work-item{
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      column-gap: 20px;
+
+  }
+  .work-summary p:first-child{
+      margin-top: 0;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+/*-------------FOOTER--------------------*/
+footer {
+  background: #222 ;
+  color: #d3d4d6;
+  display: flex;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+/* this makes all the icons in the footer align on the same line on the second line we are using descendant syle with socials as the class and img the descendant  the .socials.li is used to make the icons show side by side */
+.socials {
+  list-style-type: none;
+  padding: 0;
+
+}
+.socials li {
+
+  display: inline-block;  
+  margin-left: 10px;
+}
+
+.socials img {
+  width: 32px;
+
+}
+.socials img:hover {
+  opacity: 0.5;
+}
+@media screen and (min-width:860px){
+  footer {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+
+  }
+  
+}
+@media screen and (max-width:859px) {
+  footer{
+      text-align: center;
+      padding: 10px;
+      
+  }
+
+  
+}
