@@ -9,6 +9,7 @@
 .pic{
   height: 630px;
   border-radius: 10px;
+  width: 50%;
   }
 @media screen and (max-width: 413px){
   .pic{
